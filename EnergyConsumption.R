@@ -16,7 +16,7 @@ rmse <- function(actual, predicted){
 }
 
 ## Reading the data
-duq_pc <- read.csv("DUQ_hourly.csv",stringsAsFactors = F)
+duq_pc <- read.csv("data/DUQ_hourly.csv",stringsAsFactors = F)
 head(duq_pc)
 tail(duq_pc)
 str(duq_pc)
@@ -135,7 +135,7 @@ accuracy(baggedfc,duq_test$DUQ_MW)
 
 #Method 6: As electricity consumption is strongly related to temperature, using covariates to predict temperature
 
-temp_df<-read.csv("temperature.csv")
+temp_df<-read.csv("data/temperature.csv")
 temp_df<-subset(temp_df,select=c('datetime','Pittsburgh'))
 temp_df$datetime<- as.POSIXct(temp_df$datetime, '%Y-%m-%d %H:%M:%S', tz = "EST")
 #restrict data to 2013-01 to 2017-09
