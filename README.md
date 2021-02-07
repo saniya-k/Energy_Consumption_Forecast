@@ -36,6 +36,6 @@ Analysis and forecast of electricity consumption using various models.
 
 ## RESULTS & CONCLUSION
 
-[Model Performance](https://www.notion.so/cd67a2f3eb4e45d9ba48515c51d7089a)
+![Model Performance](/images/perf.png)
 
 Forecasting using covariates beats the mean forecast, hence is the best model for this dataset.
