@@ -35,4 +35,7 @@ Analysis and forecast of electricity consumption using various models.
 ## RESULTS & CONCLUSION
 
 Forecasting using Piecewise linear covariates model beats the baseline forecast, hence is the best model for this dataset.
+
+-
+
 ![performance](/images/perf.png)
