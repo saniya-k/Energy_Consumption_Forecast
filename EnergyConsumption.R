@@ -75,7 +75,7 @@ accuracy(baseline,duq_test$DUQ_MW)
 #Method 2 :forecasting using MSTL/STLF for the next 9 months
 set.seed(110)
 #decomposiiton using MSTL
-autoplot(mstl(msts_train)) +geom_line(color = "#00CFB3") + ggtitle('Duquesne Power - Consumption, 2013-16')+
+autoplot(mstl(msts_train)) +geom_line(color = "brickred") + ggtitle('Duquesne Power - Consumption, 2013-16')+
   xlab('Date') + ylab('Consumption in MW')
 
 #forecast
