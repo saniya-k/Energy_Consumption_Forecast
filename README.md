@@ -1,5 +1,3 @@
-# Energy Consumption Forecast
-
 Forecasting energy consumption for Pittsburgh
 
 ![banner](/images/banner.jpg)
@@ -31,11 +29,9 @@ Analysis and forecast of electricity consumption using various models.
 
 ![prophet decomp](/images/dcomp_prophet.png)
 
-- I've evaluated my performance against the mean forecast.
-- In addition, in the covariates models I've included weather data for the region in the same time period. (Source :[https://www.kaggle.com/selfishgene/historical-hourly-weather-data](https://www.kaggle.com/selfishgene/historical-hourly-weather-data))
+- I've evaluated my performance against the seasonal persistence model forecast (snaive). I.e. if I'm forecasting energy for 4 p.m. on a day, I'm using energy demand from the previous day at 4 p.m. 
+- In addition, in the covariates models, I've used lagged weather data to predict the next hour's electricity comsumption . (Source :[https://www.kaggle.com/selfishgene/historical-hourly-weather-data](https://www.kaggle.com/selfishgene/historical-hourly-weather-data))
 
 ## RESULTS & CONCLUSION
 
-![Model Performance](/images/perf.png)
-
-Forecasting using covariates beats the mean forecast, hence is the best model for this dataset.
+Forecasting using Piecewise linear covariates model beats the baseline forecast, hence is the best model for this dataset.
