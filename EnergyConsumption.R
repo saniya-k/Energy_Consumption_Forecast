@@ -66,7 +66,7 @@ plot(msts_train,main="Electricity demand at DUQ powerstation",xlab="Year",ylab="
 #Method 1 : Establish the baseline for our forecast - Using seasonal Naive model -- Previous seasonal period's value(day) used as the baseline forecast
 set.seed(110)
 baseline <- snaive(msts_train,h=24*273.75) #273.75 is the days in 9 months of our test data
-autoplot(baseline)+geom_line(color = "#00CFB3", size = 0.5) + ggtitle('Mean Forecast :Duquesne Power - Consumption, 2014')+
+autoplot(baseline)+geom_line(color = "#00CFB3", size = 0.5) + ggtitle('SNaive Forecast :Duquesne Power - Consumption, 2014')+
   xlab('Date') + ylab('Consumption in MW')
 #accuracy of the seasonal naive forecast
 accuracy(baseline,duq_test$DUQ_MW)
@@ -75,7 +75,7 @@ accuracy(baseline,duq_test$DUQ_MW)
 #Method 2 :forecasting using MSTL/STLF for the next 9 months
 set.seed(110)
 #decomposiiton using MSTL
-autoplot(mstl(msts_train)) +geom_line(color = "brickred") + ggtitle('Duquesne Power - Consumption, 2013-16')+
+autoplot(mstl(msts_train)) +geom_line(color = "#FF1BB3") + ggtitle('Duquesne Power - Consumption, 2013-16')+
   xlab('Date') + ylab('Consumption in MW')
 
 #forecast
